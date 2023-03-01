@@ -3,6 +3,15 @@ print(logo)
 import time
 import random
 
+def money1():
+    while True:
+        try:
+            money = int(input("Sit with how many chips?: "))
+            if money > 0:
+                return money
+        except:
+            print("It must be a value > 0")
+
 def betting():
     while True:
         try:
@@ -113,7 +122,7 @@ def main():
 
 if __name__ == '__main__':
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-    money = 2500
+    money = money1()
     utente1 = input("Insert your username: ")
     print(f"You join the table with 2500$")
     while True:
