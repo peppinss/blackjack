@@ -124,12 +124,15 @@ if __name__ == '__main__':
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
     money = money1()
     utente1 = input("Insert your username: ")
-    print(f"You join the table with 2500$")
+    print(f"You join the table with {money}$")
     while True:
         bet = betting()
         money = main()
         time.sleep(1)
         print(f"your balance is now {money}")
+        if money == 0:
+            print("I'm sorry but you don't have enough money to play,")
+            break
         print("play again?")
         again = scelta()
         if not again:
